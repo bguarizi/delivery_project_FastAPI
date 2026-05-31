@@ -19,10 +19,11 @@ Este projeto tem por objetivo simular um ambiente de delivery no qual uma loja p
 
 Para instalar o projeto, siga estes passos:
 
-1. Clone o repositório em sua máquina:
+1. Clone o repositório em sua máquina e acesse a pasta do projeto:
 
     ```bash
     git clone https://github.com/bguarizi/delivery_project_FastAPI.git
+    cd delivery_project_FastAPI/
     ```
 
 3. Crie uma virtual environment:
@@ -35,7 +36,6 @@ Para instalar o projeto, siga estes passos:
 4. Acesse o repositório baixado e instale o requirements.txt:
 
     ```bash
-    cd delivery_project_FastAPI/
     pip install -r requirements.txt
     ```
 
