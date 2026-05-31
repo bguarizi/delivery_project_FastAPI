@@ -235,3 +235,6 @@ __pycache__/
 # Banco local
 *.sqlite3
 database/banco.db
+
+# Alembic migrations
+alembic/versions/*.py
