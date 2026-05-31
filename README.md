@@ -26,30 +26,31 @@ Para instalar o projeto, siga estes passos:
     cd delivery_project_FastAPI/
     ```
 
-3. Crie uma virtual environment:
+2. Crie uma virtual environment:
 
     ```bash
     python3 -m venv venv
     source venv/bin/activate
     ```
 
-4. Acesse o repositório baixado e instale o requirements.txt:
+3. Acesse o repositório baixado e instale o requirements.txt:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-5. Execute o import e a migração do banco de dados:
+4. Execute o import e a migração do banco de dados:
 
     ```bash
-    ./venv/bin/python -c "import sqlite3; sqlite3.connect('database/banco.db')"
-    ./venv/bin/alembic upgrade head
+    alembic revision --autogenerate -m "Initial Migration"
+    alembic upgrade head
     ```
-6. Altere o arquivo .env.exemple:
+
+5. Altere o arquivo .env.example:
 
 Ajuste o arquivo para conter os dados indicados e renomeie-o para ".env"
 
-7. Inicie o projeto:
+6. Inicie o projeto:
 
     ```bash
     uvicorn main:app --reload
