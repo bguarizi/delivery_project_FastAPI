@@ -15,15 +15,6 @@ Este projeto tem por objetivo simular um ambiente de delivery no qual uma loja p
 
 * Hoje não há bloqueio sobre a criação de usuários adm, qualquer usuário pode criar seu acesso como admin.
 
-## Estrutura do README.md
-
-- [Instalação](#instalação)
-- [Teste Mínimo](#testemínimo)
-- [Experimentos](#experimentos)
-- [Reivindicações](#reivindicações-reprodução-da-ferramenta)
-- [Gere sua própria chave de API do OpenPage Rank (Opcional)](#chave_api)
-- [Licença](#license)
-
 ## Instalação
 
 Para instalar o projeto, siga estes passos:
