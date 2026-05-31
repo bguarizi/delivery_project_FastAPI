@@ -37,6 +37,9 @@ async def cancelar_pedido(id_pedido: int, session: Session = Depends(pegar_sessa
     
 @order_router.get("/listar")
 async def listar_pedidos(session: Session = Depends(pegar_sessao), admin: Usuario = Depends(verificar_admin)):
+    """
+    Listagem de todos os pedidos do sistema, apenas para administradores
+    """
     pedidos = session.query(Pedido).all()
     return {
         "pedidos": pedidos
@@ -104,6 +107,9 @@ async def visualizar_pedido(id_pedido: int, session: Session = Depends(pegar_ses
     
 @order_router.get("/listar/pedidos-usuario", response_model=List[ResponsePedidoSchema])
 async def listar_pedidos(session: Session = Depends(pegar_sessao), usuario: Usuario = Depends(verificar_token)):
+    """
+    Listagem dos pedidos do usuário logado, para usuários comuns
+    """
     pedidos = session.query(Pedido).filter(Pedido.usuario==usuario.id).all()
     return pedidos
     
