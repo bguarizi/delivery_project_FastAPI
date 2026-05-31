@@ -4,7 +4,7 @@ from sqlalchemy_utils.types import ChoiceType
 
 
 #Cria a conexão com o banco
-db = create_engine("sqlite:///database/banco.db")
+db = create_engine("sqlite:///banco.db")
 
 #Cria a base do banco
 Base = declarative_base()
